@@ -75,12 +75,7 @@ TARGET_BOARD_PLATFORM := mt6765
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/configs/init/fstab.mt6765
 
 # Root
-BOARD_ROOT_EXTRA_FOLDERS += \
-    custom \
-    efs \
-    omr \
-    optics \
-    prism
+BOARD_ROOT_EXTRA_FOLDERS += efs
 
 BOARD_ROOT_EXTRA_SYMLINKS += \
     /mnt/vendor/persist:/persist
