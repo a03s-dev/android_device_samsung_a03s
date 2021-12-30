@@ -6,18 +6,18 @@
 # 1 "<built-in>" 2
 # 1 "vendor/mediatek/proprietary/hardware/fstab/mt6765/fstab.in.mt6765" 2
 # 132 "vendor/mediatek/proprietary/hardware/fstab/mt6765/fstab.in.mt6765"
-system /system ext4 ro wait,avb=vbmeta_system,logical,first_stage_mount,avb_keys=/avb/q-gsi.avbpubkey:/avb/r-gsi.avbpubkey:/avb/s-gsi.avbpubkey,
+system /system ext4 ro wait,logical,first_stage_mount
 
-vendor /vendor ext4 ro wait,avb,logical,first_stage_mount,
-
-
-product /product ext4 ro wait,avb,logical,first_stage_mount,
+vendor /vendor ext4 ro wait,logical,first_stage_mount
 
 
-odm /odm ext4 ro wait,avb,logical,first_stage_mount,
+product /product ext4 ro wait,logical,first_stage_mount
+
+
+odm /odm ext4 ro wait,logical,first_stage_mount
 # 155 "vendor/mediatek/proprietary/hardware/fstab/mt6765/fstab.in.mt6765"
-/dev/block/platform/bootdevice/by-name/prism /prism ext4 ro,barrier=1 nofail,avb,first_stage_mount
-/dev/block/platform/bootdevice/by-name/optics /optics ext4 ro,barrier=1 nofail,avb,first_stage_mount
+/dev/block/platform/bootdevice/by-name/prism /prism ext4 ro,barrier=1 nofail,first_stage_mount
+/dev/block/platform/bootdevice/by-name/optics /optics ext4 ro,barrier=1 nofail,first_stage_mount
 
 
 /dev/block/platform/bootdevice/by-name/md_udc   /metadata       ext4    noatime,nosuid,nodev,noauto_da_alloc,discard,journal_checksum,data=ordered,errors=panic,sync    wait,check,formattable,first_stage_mount
@@ -64,7 +64,7 @@ odm /odm ext4 ro wait,avb,logical,first_stage_mount,
 
 
 /dev/block/platform/bootdevice/by-name/vbmeta_vendor /vbmeta_vendor emmc defaults first_stage_mount,nofail,
-/dev/block/platform/bootdevice/by-name/vbmeta_system /vbmeta_system emmc defaults first_stage_mount,nofail,,avb=vbmeta
+/dev/block/platform/bootdevice/by-name/vbmeta_system /vbmeta_system emmc defaults first_stage_mount,nofail
 
 
 
