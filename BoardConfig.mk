@@ -23,6 +23,7 @@ TARGET_2ND_CPU_VARIANT := cortex-a53
 TARGET_BOOTLOADER_BOARD_NAME := mt6765
 
 # DTBO
+BOARD_DTBO_CFG := $(DEVICE_PATH)/configs/kernel/a03s.cfg
 BOARD_KERNEL_SEPARATED_DTBO := true
 
 # Dynamic Partitions
