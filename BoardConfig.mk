@@ -65,7 +65,7 @@ TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_CLANG_COMPILE := true
 
 # Kernel Source
-TARGET_KERNEL_CONFIG := a03s_00_defconfig
+TARGET_KERNEL_CONFIG := a03s_defconfig
 TARGET_KERNEL_SOURCE := kernel/samsung/a03s
 
 # Metadata
